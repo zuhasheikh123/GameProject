@@ -8088,7 +8088,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1414860394}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1666346855}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Revive
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1176544143}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1414860394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10179,6 +10203,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 244296536}
+  activePlayer: {fileID: 1444064645}
+  CollectableCoins:
+  - {fileID: 1051003280}
+  - {fileID: 1186907209}
+  - {fileID: 766440368}
+  - {fileID: 1828819301}
+  - {fileID: 2108342788}
+  - {fileID: 1474861386}
+  - {fileID: 104234578}
+  - {fileID: 1390004904}
+  - {fileID: 1790512183}
+  - {fileID: 852728588}
+  - {fileID: 1043626360}
+  - {fileID: 1476058502}
+  - {fileID: 472421205}
+  - {fileID: 2099134117}
+  - {fileID: 879470981}
+  - {fileID: 87671825}
+  - {fileID: 872043959}
+  - {fileID: 1758739729}
+  - {fileID: 47605438}
+  - {fileID: 321169964}
+  - {fileID: 1550901437}
+  - {fileID: 2121438021}
+  - {fileID: 1598670160}
 --- !u!4 &1666346856
 Transform:
   m_ObjectHideFlags: 0
@@ -11371,12 +11420,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 57f1c32e626776e46ac024cf94f3230f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57f1c32e626776e46ac024cf94f3230f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57f1c32e626776e46ac024cf94f3230f,
         type: 3}

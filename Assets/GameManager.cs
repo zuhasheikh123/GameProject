@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
 
     public Text ScoreText;
+    public GameObject activePlayer;
+    public Transform[] CollectableCoins; 
 
 
     // Start is called before the first frame update
@@ -25,5 +27,18 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + 5);
         ScoreText.text = PlayerPrefs.GetInt("Cash").ToString();
     }
+
+    public void Revive()
+    {
+        int CoinIndex = PlayerPrefs.GetInt("Coins");
+       
+        
+            Transform revivePosition = CollectableCoins[CoinIndex];
+            activePlayer.transform.position=(revivePosition.position);
+            activePlayer.GetComponent<Rigidbody>().velocity = Vector3.zero; 
+           
+        
+    }
+
 
 }
