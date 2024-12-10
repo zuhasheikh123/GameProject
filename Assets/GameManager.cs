@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
       ScoreText.text=  PlayerPrefs.GetInt("Cash").ToString();
+        PlayerPrefs.SetInt("Coins", 0);
     }
 
     // Update is called once per frame
@@ -38,6 +40,13 @@ public class GameManager : MonoBehaviour
             activePlayer.GetComponent<Rigidbody>().velocity = Vector3.zero; 
            
         
+    }
+
+
+     public void Retry()
+    {
+        SceneManager.LoadScene("GamePlay");
+
     }
 
 
