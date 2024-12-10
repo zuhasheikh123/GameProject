@@ -8,21 +8,27 @@ public class GameManager : MonoBehaviour
 
     public Text ScoreText;
     public GameObject activePlayer;
-    public Transform[] CollectableCoins; 
+    public Transform[] CollectableCoins;
+
+
+    public float GameTimer;
+    float gTime;
+
+    public Text Timer;
+
+    public GameObject Failpanel;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
       ScoreText.text=  PlayerPrefs.GetInt("Cash").ToString();
         PlayerPrefs.SetInt("Coins", 0);
+        gTime = GameTimer;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
     public void UpdtateCoins()
     {
@@ -48,6 +54,22 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("GamePlay");
 
     }
+
+
+    private void Update()
+    {
+        GameTimer -= Time.deltaTime;
+        Timer.text = ((int)(GameTimer)).ToString();
+        if (GameTimer <= 0)
+        {
+            Failpanel.SetActive(true);
+        }
+        else
+        {
+            return;
+        }
+    }
+
 
 
 }
